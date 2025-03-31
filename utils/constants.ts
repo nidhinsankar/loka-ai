@@ -6,7 +6,7 @@ export const HOME_PAGE_CONSTANTS = {
   PLACEHOLDER: "Enter Your Logo Name",
 };
 
-export const CREAT_LOGO_CONSTANTS = {
+export const CREATE_LOGO_CONSTANTS = {
   LOGO_TITLE: "Logo Title",
   LOGO_TITLE_DESCRIPTION:
     "Add Your Business, App, or Website Name for a Custom Logo",
@@ -23,7 +23,7 @@ export const CREAT_LOGO_CONSTANTS = {
   DESIGN_IDEA_DESCRIPTION:
     "Choose a design style that aligns with your vision, or skip to receive a random suggestion.",
   AI_MODEL_PLAN: "Select your AI Model Plan",
-  AI_MODEL_PLA_DESCRIPTION: "Generate Unlimted Fast Logo with your fav model",
+  AI_MODEL_PLAN_DESCRIPTION: "Generate Unlimted Fast Logo with your fav model",
 };
 
 export const AI_MODEL_PLAN_DETAIL = {

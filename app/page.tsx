@@ -13,12 +13,14 @@ export default function Home() {
         <h4 className="font-semibold text-5xl mb-6">
           {HOME_PAGE_CONSTANTS.UNIQUE_DESC}
         </h4>
-        <p className="text-lg ">{HOME_PAGE_CONSTANTS.DESCRIPTION}</p>
+        <p className="text-lg text-gray-400">
+          {HOME_PAGE_CONSTANTS.DESCRIPTION}
+        </p>
       </div>
       <div className="flex justify-center gap-3 w-full max-w-2xl mx-auto">
         <Input
           placeholder={HOME_PAGE_CONSTANTS.PLACEHOLDER}
-          className="p-6"
+          className="p-6 shadow-lg"
           size={100}
         />
         <Button className="p-6">Get Started</Button>
