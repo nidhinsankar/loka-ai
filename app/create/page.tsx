@@ -1,5 +1,13 @@
 "use client";
+import ColorPalette from "@/components/create/color-palette";
+import DesignIdea from "@/components/create/design-idea";
+import HeaderDescription from "@/components/create/header-description";
 import InputBox from "@/components/create/input-box";
+import LogoDescription from "@/components/create/logo-description";
+import LogoStyle from "@/components/create/logo-style";
+import Logotitle from "@/components/create/logo-title";
+import ModelPlan from "@/components/create/model-plan";
+import { Button } from "@/components/ui/button";
 import { CREATE_LOGO_CONSTANTS } from "@/utils/constants";
 import { useState } from "react";
 
@@ -13,69 +21,64 @@ const CreatePage = () => {
     switch (step) {
       case 1:
         return (
-          <InputBox
-            title={CREATE_LOGO_CONSTANTS?.LOGO_TITLE}
-            description={CREATE_LOGO_CONSTANTS?.LOGO_TITLE_DESCRIPTION}
-            step={step}
-            handleStep={handleStep}
-            key={"1"}
-          />
+          <>
+            <Logotitle />
+          </>
         );
       case 2:
         return (
-          <InputBox
-            title={CREATE_LOGO_CONSTANTS?.LOGO_VISION}
-            description={CREATE_LOGO_CONSTANTS?.LOGO_VISION_DESCRIPTION}
-            step={step}
-            handleStep={handleStep}
-            key={"2"}
-          />
+          <>
+            <LogoDescription />
+          </>
         );
       case 3:
         return (
-          <InputBox
-            title={CREATE_LOGO_CONSTANTS?.COLOR_PALETTE}
-            description={CREATE_LOGO_CONSTANTS?.COLOR_PALETTE_DESCRIPTION}
-            step={step}
-            handleStep={handleStep}
-            key={"3"}
-          />
+          <>
+            <ColorPalette />
+          </>
         );
       case 4:
         return (
-          <InputBox
-            title={CREATE_LOGO_CONSTANTS?.LOGO_STYLE}
-            description={CREATE_LOGO_CONSTANTS?.LOGO_STYLE_DESCRIPTION}
-            step={step}
-            handleStep={handleStep}
-            key={"4"}
-          />
+          <>
+            <LogoStyle />
+          </>
         );
       case 5:
         return (
-          <InputBox
-            title={CREATE_LOGO_CONSTANTS?.DESIGN_IDEA}
-            description={CREATE_LOGO_CONSTANTS?.DESIGN_IDEA_DESCRIPTION}
-            step={step}
-            handleStep={handleStep}
-            key={"5"}
-          />
+          <>
+            <DesignIdea />
+          </>
         );
       case 6:
         return (
-          <InputBox
-            title={CREATE_LOGO_CONSTANTS?.AI_MODEL_PLAN}
-            description={CREATE_LOGO_CONSTANTS?.AI_MODEL_PLAN_DESCRIPTION}
-            step={step}
-            handleStep={handleStep}
-            key={"6"}
-          />
+          <>
+            <ModelPlan />
+          </>
         );
       default:
         break;
     }
   };
-  return <div className="mt-24">{switchElement()}</div>;
+  return (
+    <div className="mt-24 p-10 border shadow-lg flex flex-col gap-4 rounded-md">
+      {switchElement()}
+      <div className="flex justify-between">
+        {step !== 1 && (
+          <Button
+            onClick={() => {
+              handleStep(-1);
+            }}
+            variant={"outline"}
+          >
+            Previous
+          </Button>
+        )}
+        <Button disabled={step === 6} onClick={() => handleStep(1)}>
+          Continue
+        </Button>
+      </div>
+    </div>
+  );
 };
 
 export default CreatePage;

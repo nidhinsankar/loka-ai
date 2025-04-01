@@ -22,7 +22,7 @@ const InputBox: React.FC<IInput> = ({
     <div className="p-10 border shadow-lg flex flex-col gap-4 rounded-md">
       <HeaderDescription title={title} description={description} />
       <Input placeholder="Enter the logo title" />
-      <div className="flex justify-between">
+      {/* <div className="flex justify-between">
         {step !== 1 && (
           <Button
             onClick={() => {
@@ -36,7 +36,7 @@ const InputBox: React.FC<IInput> = ({
         <Button disabled={step === 6} onClick={() => handleStep(1)}>
           Continue
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
