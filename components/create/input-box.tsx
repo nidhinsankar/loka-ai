@@ -3,26 +3,24 @@ import { CREATE_LOGO_CONSTANTS } from "@/utils/constants";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import React, { useState } from "react";
+import HeaderDescription from "./header-description";
 
 interface IInput {
   title: string;
-  descritpion: string;
+  description: string;
   handleStep: (next: number) => void;
   step: number;
 }
 
 const InputBox: React.FC<IInput> = ({
   title,
-  descritpion,
+  description,
   handleStep,
   step,
 }) => {
   return (
     <div className="p-10 border shadow-lg flex flex-col gap-4 rounded-md">
-      <div className="flex flex-col gap-4">
-        <h2 className="font-bold text-4xl ">{title}</h2>
-        <p className="text-lg text-gray-400">{descritpion}</p>
-      </div>
+      <HeaderDescription title={title} description={description} />
       <Input placeholder="Enter the logo title" />
       <div className="flex justify-between">
         {step !== 1 && (

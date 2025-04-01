@@ -15,7 +15,7 @@ const CreatePage = () => {
         return (
           <InputBox
             title={CREATE_LOGO_CONSTANTS?.LOGO_TITLE}
-            descritpion={CREATE_LOGO_CONSTANTS?.LOGO_TITLE_DESCRIPTION}
+            description={CREATE_LOGO_CONSTANTS?.LOGO_TITLE_DESCRIPTION}
             step={step}
             handleStep={handleStep}
             key={"1"}
@@ -25,7 +25,7 @@ const CreatePage = () => {
         return (
           <InputBox
             title={CREATE_LOGO_CONSTANTS?.LOGO_VISION}
-            descritpion={CREATE_LOGO_CONSTANTS?.LOGO_VISION_DESCRIPTION}
+            description={CREATE_LOGO_CONSTANTS?.LOGO_VISION_DESCRIPTION}
             step={step}
             handleStep={handleStep}
             key={"2"}
@@ -35,7 +35,7 @@ const CreatePage = () => {
         return (
           <InputBox
             title={CREATE_LOGO_CONSTANTS?.COLOR_PALETTE}
-            descritpion={CREATE_LOGO_CONSTANTS?.COLOR_PALETTE_DESCRIPTION}
+            description={CREATE_LOGO_CONSTANTS?.COLOR_PALETTE_DESCRIPTION}
             step={step}
             handleStep={handleStep}
             key={"3"}
@@ -45,7 +45,7 @@ const CreatePage = () => {
         return (
           <InputBox
             title={CREATE_LOGO_CONSTANTS?.LOGO_STYLE}
-            descritpion={CREATE_LOGO_CONSTANTS?.LOGO_STYLE_DESCRIPTION}
+            description={CREATE_LOGO_CONSTANTS?.LOGO_STYLE_DESCRIPTION}
             step={step}
             handleStep={handleStep}
             key={"4"}
@@ -55,7 +55,7 @@ const CreatePage = () => {
         return (
           <InputBox
             title={CREATE_LOGO_CONSTANTS?.DESIGN_IDEA}
-            descritpion={CREATE_LOGO_CONSTANTS?.DESIGN_IDEA_DESCRIPTION}
+            description={CREATE_LOGO_CONSTANTS?.DESIGN_IDEA_DESCRIPTION}
             step={step}
             handleStep={handleStep}
             key={"5"}
@@ -65,7 +65,7 @@ const CreatePage = () => {
         return (
           <InputBox
             title={CREATE_LOGO_CONSTANTS?.AI_MODEL_PLAN}
-            descritpion={CREATE_LOGO_CONSTANTS?.AI_MODEL_PLAN_DESCRIPTION}
+            description={CREATE_LOGO_CONSTANTS?.AI_MODEL_PLAN_DESCRIPTION}
             step={step}
             handleStep={handleStep}
             key={"6"}
