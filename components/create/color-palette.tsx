@@ -1,4 +1,4 @@
-import { CREATE_LOGO_CONSTANTS } from "@/utils/constants";
+import { COLOR_PALETTES, CREATE_LOGO_CONSTANTS } from "@/utils/constants";
 import HeaderDescription from "./header-description";
 
 const ColorPalette = () => {
@@ -9,7 +9,32 @@ const ColorPalette = () => {
         description={CREATE_LOGO_CONSTANTS?.COLOR_PALETTE_DESCRIPTION}
         key={"3"}
       />
-      <h2>color palette</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 justify-evenly">
+        {COLOR_PALETTES.map((color) => (
+          <div className="flex">
+            <div
+              className="w-12 h-28"
+              style={{ backgroundColor: color.COLOR_1 }}
+            ></div>
+            <div
+              className="w-12 h-28"
+              style={{ backgroundColor: color.COLOR_2 }}
+            ></div>
+            <div
+              className="w-12 h-28"
+              style={{ backgroundColor: color.COLOR_3 }}
+            ></div>
+            <div
+              className="w-12 h-28"
+              style={{ backgroundColor: color.COLOR_4 }}
+            ></div>
+            <div
+              className="w-12 h-28"
+              style={{ backgroundColor: color.COLOR_5 }}
+            ></div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,14 +1,12 @@
 "use client";
 import ColorPalette from "@/components/create/color-palette";
 import DesignIdea from "@/components/create/design-idea";
-import HeaderDescription from "@/components/create/header-description";
-import InputBox from "@/components/create/input-box";
 import LogoDescription from "@/components/create/logo-description";
 import LogoStyle from "@/components/create/logo-style";
 import Logotitle from "@/components/create/logo-title";
 import ModelPlan from "@/components/create/model-plan";
 import { Button } from "@/components/ui/button";
-import { CREATE_LOGO_CONSTANTS } from "@/utils/constants";
+import { MoveLeft, MoveRight } from "lucide-react";
 import { useState } from "react";
 
 const CreatePage = () => {
@@ -70,10 +68,12 @@ const CreatePage = () => {
             }}
             variant={"outline"}
           >
+            <MoveLeft />
             Previous
           </Button>
         )}
         <Button disabled={step === 6} onClick={() => handleStep(1)}>
+          <MoveRight />
           Continue
         </Button>
       </div>
