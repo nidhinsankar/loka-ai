@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { HOME_PAGE_CONSTANTS } from "@/utils/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,7 +24,9 @@ export default function Home() {
           className="p-6 shadow-lg"
           size={100}
         />
-        <Button className="p-6">Get Started</Button>
+        <Link href={"/create"}>
+          <Button className="p-6">Get Started</Button>
+        </Link>
       </div>
       <div>
         <Image

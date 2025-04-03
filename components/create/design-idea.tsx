@@ -1,5 +1,6 @@
 import { CREATE_LOGO_CONSTANTS } from "@/utils/constants";
 import HeaderDescription from "./header-description";
+import React from "react";
 
 const Design_list = [
   "Antique Apple Press",
@@ -9,7 +10,10 @@ const Design_list = [
   "Old-fashioned Apple icon",
   "Let AI Select the best idea",
 ];
-const DesignIdea = () => {
+interface IDesignList {
+  handleSelect: (id: string, value: string) => void;
+}
+const DesignIdea: React.FC<IDesignList> = ({ handleSelect }) => {
   return (
     <div>
       <HeaderDescription
@@ -19,7 +23,10 @@ const DesignIdea = () => {
       />
       <div className="flex flex-wrap gap-4">
         {Design_list.map((design) => (
-          <div className="border px-3 py-1 rounded-full ">
+          <div
+            className="border px-3 py-1 rounded-full "
+            onClick={() => handleSelect("design-idea", design)}
+          >
             <h4 className="text-gray-800 text-lg">{design}</h4>
           </div>
         ))}

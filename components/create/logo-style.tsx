@@ -1,8 +1,12 @@
 import { CREATE_LOGO_CONSTANTS, LOGO_STYLE_DETAILS } from "@/utils/constants";
 import HeaderDescription from "./header-description";
 import Image from "next/image";
+import React from "react";
 
-const LogoStyle = () => {
+interface ILogoStyle {
+  handleSelect: (id: string, value: string) => void;
+}
+const LogoStyle: React.FC<ILogoStyle> = ({ handleSelect }) => {
   return (
     <div>
       <HeaderDescription
@@ -15,6 +19,7 @@ const LogoStyle = () => {
           <div
             className="border rounded-xl shadow-md w-full"
             key={style?.STYLE_NAME}
+            onClick={() => handleSelect("logo-style", style?.STYLE_NAME)}
           >
             <Image
               src={style?.STYLE_IMG}
