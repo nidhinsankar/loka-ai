@@ -15,31 +15,17 @@ const ColorPalette: React.FC<IColorPalette> = ({ handleSelect }) => {
         key={"3"}
       />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 justify-evenly">
-        {COLOR_PALETTES.map((color) => (
+        {COLOR_PALETTES.map((palette) => (
           <div
             className="flex"
-            onClick={() => handleSelect("color-palette", color.COLOR_1)}
+            onClick={() => handleSelect("color-palette", palette.name)}
           >
-            <div
-              className="w-12 h-28"
-              style={{ backgroundColor: color.COLOR_1 }}
-            ></div>
-            <div
-              className="w-12 h-28"
-              style={{ backgroundColor: color.COLOR_2 }}
-            ></div>
-            <div
-              className="w-12 h-28"
-              style={{ backgroundColor: color.COLOR_3 }}
-            ></div>
-            <div
-              className="w-12 h-28"
-              style={{ backgroundColor: color.COLOR_4 }}
-            ></div>
-            <div
-              className="w-12 h-28"
-              style={{ backgroundColor: color.COLOR_5 }}
-            ></div>
+            {palette.colors.map((color) => (
+              <div
+                className="w-12 h-28"
+                style={{ backgroundColor: color }}
+              ></div>
+            ))}
           </div>
         ))}
       </div>

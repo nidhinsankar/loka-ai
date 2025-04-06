@@ -48,46 +48,28 @@ export const AI_MODEL_PLAN_DETAIL = {
 
 export const COLOR_PALETTES = [
   {
-    COLOR_1: "#ff5733",
-    COLOR_2: "#33fe56",
-    COLOR_3: "#3257ff",
-    COLOR_4: "#FF32A8",
-    COLOR_5: "#F4FF32",
+    name: "Neon Pop Fusion",
+    colors: ["#ff5733", "#33fe56", "#3257ff", "#FF32A8", "#F4FF32"],
   },
   {
-    COLOR_1: "#003F5B",
-    COLOR_2: "#2f4b7b",
-    COLOR_3: "#665191",
-    COLOR_4: "#a05195",
-    COLOR_5: "#d45087",
+    name: "Midnight Ocean Dusk",
+    colors: ["#003F5B", "#2f4b7b", "#665191", "#a05195", "#d45087"],
   },
   {
-    COLOR_1: "#fe6f61",
-    COLOR_2: "#ff8466",
-    COLOR_3: "#ff9e6a",
-    COLOR_4: "#ffb773",
-    COLOR_5: "#ffd381",
+    name: "Sunset Ember Glow",
+    colors: ["#fe6f61", "#ff8466", "#ff9e6a", "#ffb773", "#ffd381"],
   },
   {
-    COLOR_1: "#296f4e",
-    COLOR_2: "#3f8e68",
-    COLOR_3: "#56a580",
-    COLOR_4: "#70bd9b",
-    COLOR_5: "#8fd6b5",
+    name: "Eco Forest Gradient",
+    colors: ["#296f4e", "#3f8e68", "#56a580", "#70bd9b", "#8fd6b5"],
   },
   {
-    COLOR_1: "#5d4037",
-    COLOR_2: "#795548",
-    COLOR_3: "#8d6e63",
-    COLOR_4: "#a1887e",
-    COLOR_5: "#d7cbc8",
+    name: "Vintage Coffee Stain",
+    colors: ["#5d4037", "#795548", "#8d6e63", "#a1887e", "#d7cbc8"],
   },
   {
-    COLOR_1: "#691b99",
-    COLOR_2: "#7b1ea2",
-    COLOR_3: "#8e24aa",
-    COLOR_4: "#9c27b0",
-    COLOR_5: "#ab47bc",
+    name: "Royal Berry Jam",
+    colors: ["#691b99", "#7b1ea2", "#8e24aa", "#9c27b0", "#ab47bc"],
   },
 ];
 
@@ -95,37 +77,55 @@ export const LOGO_STYLE_DETAILS = [
   {
     STYLE_NAME: "cartoon logo",
     STYLE_IMG: "/logo-style/design_1.webp",
+    prompt:
+      "Playful character-based design with bold outlines, exaggerated features, and vibrant color shading. Include soft shadows and a dynamic pose for character.",
   },
   {
     STYLE_NAME: "app logo",
     STYLE_IMG: "/logo-style/design_2.webp",
+    prompt:
+      "Clean geometric shapes with subtle gradients and negative space manipulation. Modern flat design with 1-2 accent colors and pixel-perfect symmetry.",
   },
   {
     STYLE_NAME: "mascot logo",
     STYLE_IMG: "/logo-style/design_3.webp",
+    prompt:
+      "Friendly animal or object personification with textured fur/features. Use dimensional shading and highlight catchlights in eyes for approachable appeal.",
   },
   {
     STYLE_NAME: "black and white line logo",
     STYLE_IMG: "/logo-style/design_4.webp",
+    prompt:
+      "Monoline art with continuous flowing strokes. Abstract or symbolic representation using varying line weights and negative space balance.",
   },
   {
     STYLE_NAME: "minimalists and elegant logos",
     STYLE_IMG: "/logo-style/design_5.webp",
+    prompt:
+      "Ultra-simplified concept using basic geometric forms and thin serif typography. Limited to 2 colors maximum with ample white space.",
   },
   {
     STYLE_NAME: "vintage custom logos",
     STYLE_IMG: "/logo-style/design_6.webp",
+    prompt:
+      "Hand-drawn aesthetic with distressed textures and ornamental flourishes. Use sepia tones and worn edges to create aged authenticity.",
   },
   {
     STYLE_NAME: "modern sharp lined logos",
     STYLE_IMG: "/logo-style/design_7.webp",
+    prompt:
+      "Angular geometric construction with razor-thin lines and metallic accents. Incorporate overlapping transparent layers and holographic effects.",
   },
   {
     STYLE_NAME: "custom luxury logo design",
     STYLE_IMG: "/logo-style/design_8.webp",
+    prompt:
+      "Gold foil embossing effect with delicate filigree patterns and high-contrast marble texture background. Use deep jewel tones and serif typography.",
   },
   {
     STYLE_NAME: "Vintage Logo Designs With Text & Icon",
     STYLE_IMG: "/logo-style/design_9.webp",
+    prompt:
+      "Retro badge layout combining classic typography with symbolic center icon. Incorporate ribbon banners and starburst elements with subtle paper texture.",
   },
 ];
