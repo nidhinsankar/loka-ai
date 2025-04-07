@@ -2,11 +2,13 @@ import { CREATE_LOGO_CONSTANTS, LOGO_STYLE_DETAILS } from "@/utils/constants";
 import HeaderDescription from "./header-description";
 import Image from "next/image";
 import React from "react";
+import { cn } from "@/lib/utils";
 
 interface ILogoStyle {
   handleSelect: (id: string, value: string) => void;
+  selectedStyle: string;
 }
-const LogoStyle: React.FC<ILogoStyle> = ({ handleSelect }) => {
+const LogoStyle: React.FC<ILogoStyle> = ({ handleSelect, selectedStyle }) => {
   return (
     <div>
       <HeaderDescription
@@ -17,9 +19,12 @@ const LogoStyle: React.FC<ILogoStyle> = ({ handleSelect }) => {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {LOGO_STYLE_DETAILS.map((style) => (
           <div
-            className="border rounded-xl shadow-md w-full"
+            className={cn(
+              "border rounded-xl shadow-md w-full",
+              selectedStyle === style?.prompt && "border border-primary p-1"
+            )}
             key={style?.STYLE_NAME}
-            onClick={() => handleSelect("logo-style", style?.STYLE_NAME)}
+            onClick={() => handleSelect("logo-style", style?.prompt)}
           >
             <Image
               src={style?.STYLE_IMG}

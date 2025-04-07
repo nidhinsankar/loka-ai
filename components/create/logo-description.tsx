@@ -5,10 +5,13 @@ import React from "react";
 
 interface ILogoDescription {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  value: string;
+  description: string;
 }
 
-const LogoDescription: React.FC<ILogoDescription> = ({ onChange, value }) => {
+const LogoDescription: React.FC<ILogoDescription> = ({
+  onChange,
+  description,
+}) => {
   return (
     <div>
       <HeaderDescription
@@ -20,7 +23,7 @@ const LogoDescription: React.FC<ILogoDescription> = ({ onChange, value }) => {
         placeholder="Enter Logo description"
         onChange={onChange}
         id="description"
-        value={value}
+        value={description}
       />
     </div>
   );

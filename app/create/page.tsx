@@ -39,37 +39,52 @@ const CreatePage = () => {
       case 1:
         return (
           <>
-            <Logotitle onChange={handleChange} />
+            <Logotitle onChange={handleChange} title={details?.title} />
           </>
         );
       case 2:
         return (
           <>
-            <LogoDescription onChange={handleChange} />
+            <LogoDescription
+              onChange={handleChange}
+              description={details?.description}
+            />
           </>
         );
       case 3:
         return (
           <>
-            <ColorPalette handleSelect={handleSelect} />
+            <ColorPalette
+              handleSelect={handleSelect}
+              selectedPalette={details?.["color-palette"]}
+            />
           </>
         );
       case 4:
         return (
           <>
-            <LogoStyle handleSelect={handleSelect} />
+            <LogoStyle
+              handleSelect={handleSelect}
+              selectedStyle={details?.["logo-style"]}
+            />
           </>
         );
       case 5:
         return (
           <>
-            <DesignIdea handleSelect={handleSelect} />
+            <DesignIdea
+              handleSelect={handleSelect}
+              selectedDesign={details?.["design-idea"]}
+            />
           </>
         );
       case 6:
         return (
           <>
-            <ModelPlan handleSelect={handleSelect} />
+            <ModelPlan
+              handleSelect={handleSelect}
+              selectedPlan={details?.["model-plan"]}
+            />
           </>
         );
       default:
